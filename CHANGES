@@ -1,3 +1,8 @@
+Version 0.2.0:
+ - added tag for easier identification
+ - updated cloud init it now deploys properly
+ - updated for output, easier access
+
 Version 0.1.0
  - main tf that uses app module and its variables
  - adding in cloud init script and basic asg app module
