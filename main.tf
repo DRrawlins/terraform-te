@@ -57,3 +57,18 @@ module "app" {
 //  zone_id           = "${var.dns_zone_id}"
 //  ssl_cert_arn      = "${var.ssl_cert_arn}"
 
+data "aws_instance" "app" {
+provider = "aws.primary"
+  filter {
+    name   = "image-id"
+    values = ["${module.app.ami_image_id}"]
+  }
+}
+
+output "ami-id" { 
+    value = "${module.app.ami_image_id}"
+}
+
+output "ssh_app_instance_ip" { 
+    value = "ssh -i ~/.ssh/prod_dr_infra_key fedora@${join(", ", data.aws_instance.app.*.public_ip)}"
+}
