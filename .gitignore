@@ -1,0 +1,31 @@
+.vagrant
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+*.deb
+
+# chef_zero_nodes
+test/integration/nodes/*.json
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+# test kitchen
+.kitchen/
+
+# Chef
+Berksfile.lock
+vendor/
+.zero-knife.rb
+Policyfile.lock.json
+
+# Terraform
+.terraform/
+
+variables/*.tfvars
+!variables/example_ENV-TIER.tfvars
