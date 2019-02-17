@@ -29,3 +29,6 @@ Policyfile.lock.json
 
 variables/*.tfvars
 !variables/example_ENV-TIER.tfvars
+
+# Inspec
+test/smoke/default/inspec.lock
